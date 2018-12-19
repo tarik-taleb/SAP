@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 18 déc. 2018 à 19:07
+-- Généré le :  mer. 19 déc. 2018 à 09:52
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -36,8 +36,18 @@ CREATE TABLE IF NOT EXISTS `candidat` (
   `numero` varchar(50) NOT NULL,
   `adresse` varchar(50) NOT NULL,
   `cv` longblob NOT NULL,
+  `motdepasse` varchar(50) NOT NULL COMMENT 'mot de passe',
   PRIMARY KEY (`id_candidat`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `candidat`
+--
+
+INSERT INTO `candidat` (`id_candidat`, `nom`, `prenom`, `numero`, `adresse`, `cv`, `motdepasse`) VALUES
+(1, 'alaoua', 'othmane', '0000', 'eee@eeee', '', ''),
+(2, 'ait', 'ben', '111', 'aaa@aaa', '', ''),
+(3, 'taleb', 'tarik', '0334399439', 'trre@eer', 0x414c414f55416f74686d616e6531636f6d702e706466, 'jenesaispas');
 
 -- --------------------------------------------------------
 
